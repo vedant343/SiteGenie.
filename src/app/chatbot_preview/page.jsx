@@ -3,6 +3,7 @@ import "../../styles/globals.css";
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import InternalNavbar from "@/components/internalnavbar";
+import FooterSection from "@/components/footer";
 
 const Preview = () => {
   const [inputValue, setInputValue] = useState("");
@@ -14,9 +15,7 @@ const Preview = () => {
         <div className="py-24">
           <header>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <h1 className="text-3xl font-bold leading-tight text-gray-900">
-                Chatbot Preview
-              </h1>
+              <div className="text-4xl ">Chatbot Preview</div>
             </div>
           </header>
           <main>
@@ -71,7 +70,6 @@ const Preview = () => {
                                             frameborder="0"
                                             allowfullscreen
                                           ></iframe>
-                                          ;
                                         </code>
                                       </pre>
                                     </div>
@@ -107,6 +105,7 @@ const Preview = () => {
           </main>
         </div>
       </div>
+      <FooterSection />
     </>
   );
 };
