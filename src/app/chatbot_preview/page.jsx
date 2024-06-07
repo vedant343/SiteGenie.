@@ -47,45 +47,39 @@ const Preview = () => {
                           <div className="px-4 py-2 sm:p-6">
                             <div className="sm:flex sm:items-start sm:justify-between px-3">
                               <div>
-                                <h3 className="text-xl leading-6 font-medium text-gray-900">
+                                <h3 className="text-lg leading-6 font-medium text-gray-900">
                                   Embed this iframe
                                 </h3>
                                 <div className="mt-2 text-sm text-gray-500">
                                   <div className="mt-1">
-                                    <div className="w-full mx-0 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block  sm:text-lg text-gray-500 border border-black rounded-md p-3 break-words">
+                                    <div className="w-100 mx-0 text-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block sm:text-lg text-gray-600 border border-black rounded-md p-2 ">
                                       {console.log(
                                         encodeURIComponent(inputValue)
                                       )}
                                       <pre>
                                         <code>
-                                          {`<iframe
-  src="http://localhost:3000/chatbot?url=${encodeURIComponent(inputValue)}"
-  class="w-full h-64"
-  frameborder="0"
-  allowfullscreen
-></iframe>`}
+                                          {`<iframe src="http://localhost:3000/chatbot?url=${encodeURIComponent(
+                                            inputValue
+                                          )}" className="w-full h-64" frameborder="0" allowfullscreen></iframe>`}
                                         </code>
                                       </pre>
                                     </div>
                                   </div>
+                                  <button
+                                    type="button"
+                                    className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-lg rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm"
+                                    onClick={() => {
+                                      navigator.clipboard.writeText(
+                                        `<iframesrc="http://localhost:3000/chatbot?url=${encodeURIComponent(
+                                          inputValue
+                                        )}" className="w-full h-64" frameborder="0" allowfullscreen ></iframe>`
+                                      );
+                                    }}
+                                    id="copyButton"
+                                  >
+                                    Copy
+                                  </button>
                                 </div>
-                              </div>
-                              <div className="mt-5 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center pl-14 sm:pl-0">
-                                <button
-                                  type="button"
-                                  className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm"
-                                  onClick={() => {
-                                    navigator.clipboard.writeText(`<iframe
-  src="http://localhost:3000/chatbot?url=${encodeURIComponent(inputValue)}"
-  class="w-full h-64"
-  frameborder="0"
-  allowfullscreen
-></iframe>`);
-                                  }}
-                                  id="copyButton"
-                                >
-                                  Copy
-                                </button>
                               </div>
                             </div>
                           </div>
