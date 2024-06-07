@@ -25,7 +25,7 @@ const FooterSection = () => {
                 <TwitterIcon width="40px" height="40px" />
               </a>
               <a
-                href="#"
+                href="https://www.notion.so/90d2c6cd3b544d35aeda0c8ab2bc3700"
                 className="text-gray-900 transition-all duration-500 hover:text-indigo-600"
               >
                 <svg
