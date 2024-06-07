@@ -42,16 +42,18 @@ const Preview = () => {
                         </h3>
                       </div>
                       <div className="bg-white sm:rounded-lg px-6 py-6 m-6">
-                        <div className="px-4 py-5 sm:p-6">
-                          <iframe
-                            src={`http://localhost:3000/chatbot?url=${encodeURIComponent(
-                              inputValue
-                            )}`}
-                            className="w-full h-64"
-                            frameBorder="0"
-                            allowFullScreen
-                          ></iframe>
-                        </div>
+                        <a href="/chatbot">
+                          <div className="px-4 py-5 sm:p-6">
+                            <iframe
+                              src={`http://localhost:3000/chatbot?url=${encodeURIComponent(
+                                inputValue
+                              )}`}
+                              className="w-full h-64"
+                              frameBorder="0"
+                              allowFullScreen
+                            ></iframe>
+                          </div>
+                        </a>
                         <div className="mt-4">
                           <h3 className="text-lg leading-6 font-medium text-gray-900">
                             Embed this iframe

@@ -96,7 +96,7 @@ const Chatbot = () => {
                   className="flex items-center bg-indigo-600 text-white hover:bg-indigo-600"
                 >
                   <a
-                    href="/user-dashboard"
+                    href="/chatbot_preview"
                     className="flex items-center space-x-2"
                   >
                     <ArrowLeft className="text-bold" />
