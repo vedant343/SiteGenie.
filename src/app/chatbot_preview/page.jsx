@@ -3,9 +3,20 @@ import "../../styles/globals.css";
 import { useState } from "react";
 import InternalNavbar from "@/components/internalnavbar";
 import FooterSection from "@/components/footer";
+import { CircleCheckBigIcon, CopyIcon, CopyXIcon } from "lucide-react";
 
 const Preview = () => {
   const [inputValue, setInputValue] = useState("");
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(
+      `<iframe src="http://localhost:3000/chatbot?url=${encodeURIComponent(
+        inputValue
+      )}" className="w-full h-64" frameborder="0" allowfullscreen></iframe>`
+    );
+    setCopied(true);
+  };
 
   return (
     <>
@@ -48,7 +59,7 @@ const Preview = () => {
                           <div className="mt-2 text-sm text-gray-500">
                             <div className="mt-1">
                               <div className="flex items-center space-x-2">
-                                <div className="w-full max-w-full overflow-auto text-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block sm:text-lg text-gray-600 border border-gray-300 rounded-md p-4 bg-gray-50">
+                                <div className="w-full max-w-full overflow-auto text-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block sm:text-lg text-gray-600 border border-gray-300 rounded-md p-2 bg-gray-50">
                                   {console.log(encodeURIComponent(inputValue))}
                                   <pre>
                                     <code>
@@ -60,17 +71,15 @@ const Preview = () => {
                                 </div>
                                 <button
                                   type="button"
-                                  className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-lg rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm"
-                                  onClick={() => {
-                                    navigator.clipboard.writeText(
-                                      `<iframe src="http://localhost:3000/chatbot?url=${encodeURIComponent(
-                                        inputValue
-                                      )}" className="w-full h-64" frameborder="0" allowfullscreen></iframe>`
-                                    );
-                                  }}
+                                  className="inline-flex items-center p-4 sm:p-4 border border-transparent shadow-sm text-lg rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm"
+                                  onClick={handleCopy}
                                   id="copyButton"
                                 >
-                                  Copy
+                                  {copied ? (
+                                    <CircleCheckBigIcon className="h-6 w-6 sm:h-4 sm:w-4" />
+                                  ) : (
+                                    <CopyIcon className="h-6 w-6 sm:h-4 sm:w-4" />
+                                  )}
                                 </button>
                               </div>
                             </div>
