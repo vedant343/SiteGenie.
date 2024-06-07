@@ -22,7 +22,7 @@ const Preview = () => {
     <>
       <div className="min-h-full flex flex-col">
         <InternalNavbar />
-        <div className="flex-grow py-24">
+        <div className="flex-grow py-28">
           <header>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-4xl text-center sm:text-left">
