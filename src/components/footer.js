@@ -1,4 +1,5 @@
 import { GithubIcon, TwitterIcon } from "lucide-react";
+import SiteGenieLogo from "./sitegenie-logo";
 const FooterSection = () => {
   return (
     <>
@@ -7,7 +8,7 @@ const FooterSection = () => {
           <div class="max-w-3xl mx-auto text-center">
             <a href="/" class="flex justify-center mb-8">
               <span class="self-center text-black text-5xl whitespace-nowrap">
-                Site<span class="text-indigo-600">Genie.ai</span>
+                <SiteGenieLogo />{" "}
               </span>
             </a>
 
