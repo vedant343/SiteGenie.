@@ -2,6 +2,7 @@
 import React from "react";
 import { useEffect, useState, useRef } from "react";
 import { UserButton } from "@clerk/nextjs";
+import SiteGenieLogo from "./sitegenie-logo";
 const InternalNavbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -65,8 +66,7 @@ const InternalNavbar = () => {
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
           <span className="self-center text-black text-4xl whitespace-nowrap">
-            Site<span className="text-indigo-600">Genie.ai</span>
-
+            <SiteGenieLogo />{" "}
           </span>
         </a>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse ml-auto">
