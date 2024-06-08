@@ -41,7 +41,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
           {" "}
           <div className="px-4 py-28 sm:px-0">
-            <div className="text-4xl">Dashboard</div>
+            <div className="text-5xl">Dashboard</div>
             <div className="border-4 border-dashed border-gray-200 rounded-lg h-96 mt-8">
               <div className="flex justify-center items-center ">
                 <div className="m-8 justify-center relative py-2 px-3 bg-white border border-gray-200 rounded-2xl shadow-md flex flex-row items-center w-[350px] text-indigo-700 hover:shadow-lg">
@@ -115,7 +115,7 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <FooterSection />
+      <FooterSection />{" "}
     </>
   );
 }

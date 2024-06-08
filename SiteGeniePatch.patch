@@ -1,0 +1,13 @@
+diff --git a/src/app/user-dashboard/page.js b/src/app/user-dashboard/page.js
+index 0bc6892..61a2bdc 100644
+--- a/src/app/user-dashboard/page.js
++++ b/src/app/user-dashboard/page.js
+@@ -115,7 +115,6 @@ export default function Home() {
+           </div>
+         </div>
+       </main>
+-      <FooterSection />
+-    </>
++      <FooterSection />    </>
+   );
+ }
