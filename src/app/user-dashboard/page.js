@@ -71,7 +71,6 @@ export default function Home() {
                         </button>
                       </div>
                     </DialogTrigger>
-
                     <DialogContent className="sm:max-w-md">
                       <Create />
                     </DialogContent>
